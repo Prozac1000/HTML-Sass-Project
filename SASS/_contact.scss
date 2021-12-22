@@ -1,0 +1,49 @@
+.container {
+    height: 80vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 25%;
+    @include mobile() {
+        padding: 1.5em 10%;
+    }
+    @include tablet() {
+        padding: 1.5em 10%;
+    }
+    h2{
+        color: #8cbf3f;
+        font-family: 'henny penny';
+        font-size: 2em;
+    }
+    input {
+        text-align: center;
+        margin: 1em;
+        border-radius: 5px;
+        height: 1.7em;
+        background-color: #f2cc0f;
+        pad: 5em;
+        
+    }
+    textarea {
+        text-align: center;
+        resize: none;
+        height: 3.5em;
+        margin: 1.1em;
+        border-radius: 5px;
+        background-color: #f2cc0f;
+    }
+    span{
+        color: crimson;
+        font-family: 'roboto';
+        font-size: 0.8em;
+        height: 3em;
+    }
+    #submit{
+        background-color: #9453a6;
+        color: #0d0d0d;
+        border-radius: 10px;
+        height: 2em;
+
+    }
+}

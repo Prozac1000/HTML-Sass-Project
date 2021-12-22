@@ -1,0 +1,121 @@
+
+/* Slider */
+.slider {
+    background-color: #f2f2f2;
+    display: flex;
+    width: 500%;
+    position: relative;
+    animation: insider 15s infinite alternate ease-in-out;
+    padding: 2.5em 0em;
+    @include tablet {
+        animation: none;
+    }
+        .photo{
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    &::before {
+        position: absolute;
+        width: 90%;
+        height: 5px;
+        background: linear-gradient(to right, #9453a6, #f2cc0f, #8cbf3f);
+        content: "";
+        top: 0;
+    }
+    &::after {
+        position: absolute;
+        width: 90%;
+        height: 5px;
+        background-color: #9453a6;
+        background: linear-gradient(to left, #9453a6, #f2cc0f, #8cbf3f);
+        content: "";
+        bottom: 0;
+    }
+}
+@keyframes insider {
+    0% {
+        right: 0;
+    }
+    15% {
+        right: 0;
+    }
+    20% {
+        right: 100%;
+    }
+    35% {
+        right: 100%;
+    }
+    40% {
+        right: 200%;
+    }
+    65% {
+        right: 200%;
+    }
+    70% {
+        right: 300%;
+    }
+    85% {
+        right: 300%;
+    }
+    90% {
+        right: 400%;
+    }
+    100% {
+        right: 400%;
+    }
+}
+
+/* grid */
+#sponsors {
+    padding: 25px 25px;
+    font-family: 'henny penny';
+
+    h2{
+        font-size: 1.8em;
+        text-decoration: underline;
+        color: #8cbf3f;
+    }
+
+    #sponsors-grid{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(4,minmax(100px,200px));
+        gap: 1rem;
+
+        @include laptop {
+            grid-template-columns: repeat(3, minmax(100px, 200px));
+        }
+        @include tablet {
+            grid-template-columns: repeat(2, minmax(100px, 200px));
+        }
+        @include mobile {
+            grid-template-columns: auto;
+        }
+        img {
+            border: 3px solid darken(#f2f2f2, 5%);
+            max-width: 200px;
+            max-height: 120px;
+            border-radius: 25px;
+            background-color: #f2f2f2;
+        }
+        }
+    }
+
+.para {
+    color: #0d0d0d;
+    padding: 0 3em;
+};
+
+.grid-item {
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        transform: scale(1.15);
+        transition: all 0.5s ease-in-out;
+    }
+};
+
+    
+
